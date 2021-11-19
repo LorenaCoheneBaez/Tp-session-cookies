@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px 'Consolas', Helvetica, Arial, sans-serif;
+}
+/*HEADER*/
+.header {
+  background-color: #de3a3177;
+  margin-bottom: 10%;
+  font-size: 18px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 0 10px;
+  padding-inline-start: 0;
+}
+
+.a-logo {
+  align-self: center;
+}
+.logo {
+  width: 12vh;
+  border-radius: 20%;
+  margin-right: 8px;
+}
+
+li {
+  list-style: none;
+  margin-right: 8px;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.877);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+i:hover{
+  color: #fff;
+}
+.dcha {
+  display: flex;
+  align-items: center;
+}
+.costado {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*MAIN*/
+
+main{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+h1,
+h4 {
+  margin: 3%;
+}
+
+.card-group {
+  margin: 3%;
+}
+
+h5 {
+  text-decoration: underline;
+}
+
+/*FORMULARIO*/
+
+.form-block{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
+
+input{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+input,select{
+  font-size: initial;
+  outline: none; /*Saca el borde cuando es seleccionado*/
+}
+
+input:focus{
+  border-bottom: solid 2px #de3a3177;
+}
+
+select:focus{
+  border: solid 2px #de3a3177;
+}
+
+button{
+  border: solid 2px #de3a3177;
+  color: #de3a3177;
+  background-color: transparent;
+  font-weight:bold;
+}
+
+button:hover{
+  background-color: #de3a3177;
+  color: #fff;
+}
+
+/* Hoja formulario de registro */
+.registro{
+  color: #de3a3177;
+  background-color: transparent;
+  font-weight:bold;
+}
+
+.registro:hover{
+  background-color: #de3a3177;
+  color: #fff;
+}
+
+.input-group{
+  justify-content: space-evenly;
+}
+
+/* //botón switch */
+.switch:checked{
+background-color: #de3a3177;
+border: 2px solid #de3a3177;
+}
+
+
+/*FOOTER*/
+footer {
+  background-color: rgb(230, 229, 229);
+  margin-top: 10%;
+}
+
+/*RESPONSIVE*/
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .costado {
+    font-size: 20px;
+  }
+}

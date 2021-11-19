@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <%- include('./partials/head') %>
+  <!-- Head -->
+  <body>
+    <!-- Header -->
+    <%- include('./partials/header') %>
+    <!-- Header -->
+    <main>
+      <form action="" method="POST" novalidate>
+        <div class="input-group mb-3">
+          <div class="form-block">
+            <label for="name">Ingrese su nombre</label>
+            <input type="text" id="name" name="name" value="<%= locals.old && locals.old.name ? old.name : null%>">
+            <span>
+              <%= locals.errores && locals.errores.name ? errores.name.msg : null %>
+              </span>
+            
+          </div>
+          <div class="form-block">
+            <label for="color">Elija un color</label>
+            <select name="color" id="color">
+              <option value="" hidden selected>Seleccione un color</option>
+              <option value="naranja" <%= locals.old && old.color === 'naranja' ? 'selected' : null%> >Naranja</option>
+              <option value="violeta" <%= locals.old && old.color === 'violeta' ? 'selected' : null%> >Violeta</option>
+              <option value="amarillo" <%= locals.old && old.color === 'amarillo' ? 'selected' : null%> >Amarillo</option>
+            </select>
+             <p>
+              <%= locals.errores && locals.errores.color ? errores.color.msg : null %>
+            </p>
+          </div>
+          <div class="form-block">
+            <label for="email">Ingrese su email</label>
+            <input type="email" id="email" name="email" value="<%= locals.old && locals.old.email ? old.email : null%>">
+            <p>
+              <%= locals.errores && locals.errores.email ? errores.email.msg : null %>
+            </p>
+          </div>
+          <div class="form-block">
+            <label for="edad">Ingrese su edad</label>
+            <input type="number" id="edad" name="edad" value="<%= locals.old && locals.old.edad ? old.edad : null%>">
+            <p>
+              <%= locals.errores && locals.errores.edad ? errores.edad.msg : null %>
+            </p>
+          </div>
+        </div>
+          <div class="form-check form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Recordar color</label>
+            <input class="form-check-input switch" type="checkbox" id="flexSwitchCheckDefault">
+            
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit">ENVIAR</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <%- include('./partials/footer') %>
+    <!-- Footer -->
+  </body>
+  <!-- ----scripts ----->
+  <% - include('./partials/scripts') %>
+  <!-- ----scripts---- -->
+</html >

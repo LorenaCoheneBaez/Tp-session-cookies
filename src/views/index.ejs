@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <%- include('./partials/head') %>
+  <!-- Head -->
+  <body>
+    <!-- Header -->
+    <%- include('./partials/header') %>
+    <!-- Header -->
+    <main>
+      <% if (locals.userLogin) { %>
+        <h3>¡Hola <%= datos.name %>  !, elegiste el color: <%= datos.color %>, tu e-mail es: <%= datos.email%>, y tu edad es: <%= datos.edad %>.</h3>
+        <% } else { %>
+         <h3></h3>
+        <% } %>
+      <section class="jobs">
+        <h1>Nuestros diseños</h1>
+        <div class="card-group">
+          <div class="card">
+            <img
+              src="../../images/Oriental.jpg"
+              class="card-img-top"
+              alt="Garden"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Inspiración oriental</h5>
+              <p class="card-text">
+                Inspirado en los tradicionales jardines orientales, donde el
+                agua cobra protagonismo.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="../../images/jardin-sostenible.jpg"
+              class="card-img-top"
+              alt="Jardín sostenible"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bosque urbano</h5>
+              <p class="card-text">
+                Para espacios grandes, este jardín con aires de bosque se
+                destaca por ser sostenible.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="../../images/jardines-peq.jpg"
+              class="card-img-top"
+              alt="Jardín pequeño"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jardín vertical</h5>
+              <p class="card-text">
+                Con un jardín vertical podrás incorporar el verde a tu vida,
+                aunque tengas poco espacio.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-group">
+          <div class="card">
+            <img
+              src="../../images/Ensuenio.jpg"
+              class="card-img-top"
+              alt="Ensueño"
+            />
+            <div class="card-body">
+              <h5 class="card-title">De ensueño</h5>
+              <p class="card-text">
+                El jardín de cuento de hadas es posible, con el verde como
+                protagonista.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="../../images/natural.jpg"
+              class="card-img-top"
+              alt="Natural"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Salvaje</h5>
+              <p class="card-text">
+                Este diseño emula entornos naturales, pero con la ventaja del
+                bajo mantenimiento.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="../../images/canteros.jpg"
+              class="card-img-top"
+              alt="Canteros"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Canteros</h5>
+              <p class="card-text">
+                Los canteros son un gran aliado para tener flores que sean tu
+                fondo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="/registro" class="registro">Registrate para recibir las novedades.</a>
+      </section>
+    </main>
+    <!-- Footer -->
+    <%- include('./partials/footer') %>
+    <!-- Footer -->
+  </body>
+  <!-- ----scripts ----->
+  <%- include('./partials/scripts') %>
+  <!-- ----scripts---- -->
+</html>
