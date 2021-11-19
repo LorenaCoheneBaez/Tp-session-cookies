@@ -10,6 +10,7 @@ let validate = [
     .isEmail()
     .withMessage('Ingrese un formato válido'),
   check('color').notEmpty().withMessage('Campo obligatorio'),
+  check('edad').notEmpty().withMessage('Campo obligatorio'),
 ];
 
 module.exports=validate;

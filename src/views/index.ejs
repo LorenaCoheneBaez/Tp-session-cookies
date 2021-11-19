@@ -3,13 +3,15 @@
   <!-- Head -->
   <%- include('./partials/head') %>
   <!-- Head -->
-  <body>
+  <body class="<%= locals.userLogin.color ? locals.userLogin.color: null %>">
     <!-- Header -->
     <%- include('./partials/header') %>
     <!-- Header -->
     <main>
       <% if (locals.userLogin) { %>
-        <h3>¡Hola <%= datos.name %>  !, elegiste el color: <%= datos.color %>, tu e-mail es: <%= datos.email%>, y tu edad es: <%= datos.edad %>.</h3>
+        <h3 class="titulo-saludo animacion-escritura">¡Bienvenid@ <%= locals.userLogin.name %>!</h3>
+        <h3>
+        Elegiste el color: <%= locals.userLogin.color %>, tu e-mail es: <%= locals.userLogin.email%>, y tienes: <%= locals.userLogin.edad %> años.</h3>
         <% } else { %>
          <h3></h3>
         <% } %>
@@ -103,7 +105,10 @@
             </div>
           </div>
         </div>
+        <!-- Si hay alguien en session que no lo muestre -->
+        <% if (!locals.userLogin) { %>
         <a href="/registro" class="registro">Registrate para recibir las novedades.</a>
+        <% } %>
       </section>
     </main>
     <!-- Footer -->

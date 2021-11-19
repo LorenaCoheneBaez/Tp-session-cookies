@@ -3,14 +3,19 @@
    <!-- Head -->
   <%- include('./partials/head') %> 
   <!-- Head -->
-  <body>
+  <body class="<%= locals.userLogin.color ? locals.userLogin.color: null %>">
     <!-- Header -->
     <%- include('./partials/header') %> 
     <!-- Header -->
     <main>
       <section class="jobs">
-      <h1>chauuuuuuuuuu
-        Gracias por visitarnos.</h1>
+        <% if (locals.userLogin) { %>
+      <h1 class="titulo-saludo animacion-escritura"> <%= locals.userLogin.name %>  Gracias por visitarnos.</h1>
+     
+      <% } else { %>
+        <h1 class="titulo-saludo animacion-escritura">Gracias por visitarnos.</h1>
+        <br>
+        <% } %>
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -47,6 +52,11 @@
   </button>
 </div>
 </section>
+<br>
+<br>
+<% if (locals.userLogin) { %>
+<a href="/users/mas/olvidarColor" class="btn btn-outline-secondary">Olvidar</a>
+<% } %>
     </main>
     
     <!-- Footer -->

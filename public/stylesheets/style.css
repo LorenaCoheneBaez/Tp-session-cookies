@@ -4,6 +4,19 @@
 body {
   font: 16px 'Consolas', Helvetica, Arial, sans-serif;
 }
+
+/* FONDOS P/BODY GENERALES QUE SE GUARDAN EN SESSION/COOKIES */
+
+.naranja{
+  background-color: rgba(255, 166, 0, 0.411);
+}
+.azul{
+  background-color: rgba(0, 174, 255, 0.281);
+}
+.violeta{
+  background-color: rgba(238, 130, 238, 0.425);
+}
+
 /*HEADER*/
 .header {
   background-color: #de3a3177;
@@ -67,6 +80,42 @@ h4 {
   margin: 3%;
 }
 
+/* {Animación escritura en vivo para titulos */
+.titulo-saludo{
+  position: relative;
+      top: 50%;
+      width: 16em;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;transform: translateY(-50%);
+}
+
+.animacion-escritura{
+  animation: escritura 4s steps(36) 1s 1 normal both,
+      cursor 500ms steps(36) infinite normal;
+}
+
+@keyframes escritura {
+      from {
+            width: 0;
+      }
+      to {
+            width: 16em;
+      }
+}
+
+@keyframes cursor {
+      from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+      }
+}
+
 .card-group {
   margin: 3%;
 }
@@ -75,7 +124,7 @@ h5 {
   text-decoration: underline;
 }
 
-/*FORMULARIO*/
+/*FORMULARIO DE REGISTRO*/
 
 .form-block{
   display: flex;
@@ -92,6 +141,11 @@ input{
 input,select{
   font-size: initial;
   outline: none; /*Saca el borde cuando es seleccionado*/
+}
+.input-select{
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 input:focus{

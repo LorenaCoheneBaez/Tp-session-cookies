@@ -8,13 +8,14 @@ return res.render('index', {
         datos,
     });
     },
-
+//Vista registro
     indexGet: (req, res) => {
         return res.render('registro', {
             title: 'Garden designs',
             datos,
         });
     },
+    //Método guardar registro
 indexPost: (req, res) =>{
     let errors = validationResult(req);
     if (errors.isEmpty()) {
@@ -29,17 +30,22 @@ let logueado={
 }
 datos.push(logueado)
 guardar(datos)
-//guardar datos de la session
-req.session.userLogin={
-    name,
-    color,
-    email,
-    edad
-}
-//cookie, para recordar color
-//FIXME: ARREGLAR METODO DE RECORDAR COLOR
-//         recordar && res.cookie("Esto es session",req.session.userLogin,{maxAge:50000})
-// return res.redirect('/')
+        //guardar datos de la session
+        let on = req.body.recordar;
+        if (on) {
+            res.cookie("color", req.body.color, { maxAge: 120000 });
+            res.cookie("name", req.body.name, { maxAge: 120000 });
+            res.cookie("edad", req.body.edad, { maxAge: 120000 });
+            res.cookie("email", req.body.email, { maxAge: 120000 });
+        }
+        req.session.userLogin = {
+            name,
+            color,
+            email,
+            edad
+        }
+        console.log(req.session)
+        res.render('index', { title: 'Garden designs', name, color, email, edad })
     }else{
         return res.render('registro',{
             datos,
@@ -48,5 +54,19 @@ req.session.userLogin={
             title: 'Garden designs'
         })
     }
-}
+},
+despedida: (req, res) => {
+    console.log(req.session)
+
+         return res.render('despedida', {
+           datos, title: 'Garden designs' })
+    },
+olvidarColor: (req, res) => {
+        req.session.destroy();
+        res.clearCookie('name');
+        res.clearCookie('color');
+        res.clearCookie('edad');
+        res.clearCookie('email');
+        res.redirect("/");
+    }
 };
