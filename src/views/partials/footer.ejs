@@ -1,23 +1,104 @@
 <footer>
-<nav>
-    <ul class="footer-ul">
-        <div class="izquierda">
-            <li> <a href="">CONTACTO</a> </li>
-            <li> <a href="">DONDE ESTAMOS</a> </li>
-            <li> <a href="">ACERCA DE MÍ</a> </li>
+    <nav>
+        <ul class="footer-ul">
+            <div class="izquierda">
+                <li class="nav-item"> <a class="active" aria-current="page" data-bs-toggle="modal"
+                        data-bs-target="#contacto" href="#">CONTACTO</a> </li>
+                <li class="nav-item"> <a class="active" aria-current="page" data-bs-toggle="modal"
+                        data-bs-target="#dondeEstamos" href="#">DONDE ESTAMOS</a> </li>
+                <li class="nav-item"> <a class="active" aria-current="page" data-bs-toggle="modal"
+                        data-bs-target="#acerca" href="#">ACERCA DE NOSOTROS</a> </li>
+            </div>
+            <div class="footer-dcha">
+                <li>
+                    <a href="https://www.facebook.com/" target="blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="blank">
+                        <i class="fab fa-instagram-square"></i>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="blank">
+
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+            </div>
+            </d>
+        </ul>
+    </nav>
+
+    <!-- MODALES -->
+    <!-- Modal contacto -->
+    <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contáctanos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Deja tu mensaje en: garden_designs__demo@mail.com
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-        <div class="footer-dcha">
-            <li>
-                <i class="fab fa-facebook-square"></i>
-            </li>
-            <li>
-                <i class="fab fa-instagram-square"></i>
-            </li>
-            <li>
-                <i class="fab fa-twitter-square"></i>
-            </li>
+    </div>
+
+    <!-- Modal dondeEstamos -->
+    <div class="modal fade" id="dondeEstamos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Dónde estamos?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+
+                        Nuestro local se encuentra en: Calle Falsa-1234.
+                    </p>
+                    <p>
+
+                        ¡Te esperamos! 
+                    </p>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
         </div>
-    </d>
-    </ul>
-</nav>
+    </div>
+    <!-- Modal acerca -->
+    <div class="modal fade" id="acerca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Acerca de nosotros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                      <p>
+
+                         Nos especializamos en el diseño de jardines desde el año 2000.
+                    </p>
+                    <p>
+
+                        Mirá nuestra galería y contactanos, juntos podemos crear el jardín de tus sueños.
+                    </p>
+               
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>

@@ -130,5 +130,29 @@
     "color": "violeta",
     "email": "lol@gmail.com",
     "edad": 15
+  },
+  {
+    "name": "Lorena",
+    "color": "violeta",
+    "email": "lore@outlook.com",
+    "edad": 22
+  },
+  {
+    "name": "lore",
+    "color": "violeta",
+    "email": "lo@gmail.com",
+    "edad": 22
+  },
+  {
+    "name": "Lorena",
+    "color": "naranja",
+    "email": "lo@gmail.com",
+    "edad": 20
+  },
+  {
+    "name": "Lore",
+    "color": "naranja",
+    "email": "lo@gmail.com",
+    "edad": 20
   }
 ]

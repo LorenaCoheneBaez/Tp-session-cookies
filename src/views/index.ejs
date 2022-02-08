@@ -8,15 +8,21 @@
     <%- include('./partials/header') %>
     <!-- Header -->
     <main>
-      <% if (locals.userLogin) { %>
-        <h3 class="titulo-saludo animacion-escritura">¡Bienvenid@ <%= locals.userLogin.name %>!</h3>
-        <h3>
-        Elegiste el color: <%= locals.userLogin.color %>, tu e-mail es: <%= locals.userLogin.email%>, y tienes: <%= locals.userLogin.edad %> años.</h3>
-        <% } else { %>
-         <h3></h3>
-        <% } %>
+      <section>
+        <% if (locals.userLogin) { %>
+          <h3 class="titulo-saludo animacion-escritura">¡Bienvenid@ <%= locals.userLogin.name %>!</h3>
+          <h3>
+          Elegiste el color: <%= locals.userLogin.color %>, tu e-mail es: <%= locals.userLogin.email%>, y tienes: <%= locals.userLogin.edad %> años.</h3>
+          <% } %>
+      </section>
+        <section>
+          <!-- Si hay alguien en session que no lo muestre -->
+          <% if (!locals.userLogin) { %>
+            <a href="/registro" class="registro">Registrate para recibir las novedades.</a>
+            <% } %>
+        </section>
       <section class="jobs">
-        <h1>Nuestros diseños</h1>
+        <h1 class="text-center">Nuestros diseños</h1>
         <div class="card-group">
           <div class="card">
             <img
@@ -105,10 +111,6 @@
             </div>
           </div>
         </div>
-        <!-- Si hay alguien en session que no lo muestre -->
-        <% if (!locals.userLogin) { %>
-        <a href="/registro" class="registro">Registrate para recibir las novedades.</a>
-        <% } %>
       </section>
     </main>
     <!-- Footer -->

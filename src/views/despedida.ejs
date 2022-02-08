@@ -1,69 +1,115 @@
 <!DOCTYPE html>
 <html>
-   <!-- Head -->
-  <%- include('./partials/head') %> 
+  <!-- Head -->
+  <%- include('./partials/head') %>
   <!-- Head -->
   <body class="<%= locals.userLogin.color ? locals.userLogin.color: null %>">
     <!-- Header -->
-    <%- include('./partials/header') %> 
+    <%- include('./partials/header') %>
     <!-- Header -->
     <main>
       <section class="jobs">
         <% if (locals.userLogin) { %>
-      <h1 class="titulo-saludo animacion-escritura"> <%= locals.userLogin.name %>  Gracias por visitarnos.</h1>
-     
-      <% } else { %>
-        <h1 class="titulo-saludo animacion-escritura">Gracias por visitarnos.</h1>
-        <br>
+        <h1 class="titulo-saludo animacion-escritura">
+         Esperamos verte otra vez <%= locals.userLogin.name %>.
+        </h1>
+        <h1 class="titulo-saludo animacion-escritura">
+          Gracias por visitarnos.
+        </h1>
+
+        <% } else { %>
+        <h1 class="titulo-saludo animacion-escritura">
+          Gracias por visitarnos.
+        </h1>
+        <br />
         <% } %>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="../../images/jardines-peq.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-       
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../../images/Oriental.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="../../images/jardin-sostenible.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</section>
-<br>
-<br>
-<% if (locals.userLogin) { %>
-<a href="/users/mas/olvidarColor" class="btn btn-outline-secondary">Olvidar</a>
-<% } %>
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img
+                src="../../images/jardines-peq.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="../../images/Oriental.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../../images/jardin-sostenible.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block"></div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <br />
+      <br />
+      <% if (locals.userLogin) { %>
+      <a href="/users/mas/olvidarColor" class="btn btn-outline-secondary"
+        >Olvidar</a
+      >
+      <% } %>
     </main>
-    
+
     <!-- Footer -->
-    <%- include('./partials/footer') %> 
+    <%- include('./partials/footer') %>
     <!-- Footer -->
   </body>
-   <!-- ----scripts ----->
+  <!-- ----scripts ----->
   <%-include('./partials/scripts') %>
-    <!-- ----scripts---- -->
+  <!-- ----scripts---- -->
 </html>
