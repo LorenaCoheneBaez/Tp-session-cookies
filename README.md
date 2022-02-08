@@ -28,9 +28,6 @@ Para cerrar la session y dejar de almacenar las cookies, se encuentra el botón 
 <a href="https://getbootstrap.com" target="_blank" data-bs-toggle="tooltip" title="Bootstrap"> <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap"/></a>
   </p>
 
-### Vista previa
-![Garden designs vista previa del home](https://github.com/LorenaCoheneBaez/crud-manipulacion-datos-db/blob/[master]/public/images/home-preview-garden.jpeg?raw=true)
-
 ### ¿Cómo instalar el proyecto?
 
 #### Desde la terminal:
