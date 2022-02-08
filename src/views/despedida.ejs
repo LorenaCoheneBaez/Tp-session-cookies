@@ -10,16 +10,13 @@
     <main>
       <section class="jobs">
         <% if (locals.userLogin) { %>
+        
         <h1 class="titulo-saludo animacion-escritura">
-         Esperamos verte otra vez <%= locals.userLogin.name %>.
+          Gracias por visitarnos <%= locals.userLogin.name %>.
         </h1>
-        <h1 class="titulo-saludo animacion-escritura">
-          Gracias por visitarnos.
-        </h1>
-
         <% } else { %>
-        <h1 class="titulo-saludo animacion-escritura">
-          Gracias por visitarnos.
+        <h1 class="text-center">
+          Galería
         </h1>
         <br />
         <% } %>
