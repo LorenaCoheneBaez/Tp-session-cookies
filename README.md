@@ -1,4 +1,4 @@
-# Garden designs
+# Garden designs | Session y cookies
 
 ## Objetivo:
 
@@ -35,13 +35,13 @@ Para cerrar la session y dejar de almacenar las cookies, se encuentra el botón 
 - Clonar el proyecto:
 
 ```
-git clone https://github.com/LorenaCoheneBaez/Tp-session-cookies.git
+git clone https://github.com/LorenaCoheneBaez/garden-designs-session-cookies.git
 ```
 
 - Ingresar a la carpeta del proyecto:
 
 ````
- cd Tp-session-cookies
+ cd garden-designs-session-cookies
 ````
 
 - Para instalar las dependencias correr: 
